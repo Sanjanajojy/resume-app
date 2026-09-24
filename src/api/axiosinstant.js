@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const axiosInstance = axios.create({
    // baseURL: "http://localhost:4000",
-    baseURL: "http://https://resumes-ynwl.onrender.com",
+    baseURL: "https://resumes-ynwl.onrender.com",
   timeout: 5000,
 })
 

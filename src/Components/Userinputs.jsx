@@ -110,22 +110,18 @@ const handleAddResume=async()=>{
 
 const response=await saveResumeAPI(resumeData)
 console.log(response);
-if(response.status=="201"){
+if(response.status==201){
   toast.success("resume added succesfully")
   
   const resumeId=response.data.id
   setTimeout(()=>{
     navigate(`/resume/${resumeId}/view`)
   },2000)
-}
-   
-  }else{
+}else{
     toast.info("please fill missing fields")
   }
 }
-
-
-
+}
   return (
     <div>
        <Box sx={{ width: '100%' }}>
