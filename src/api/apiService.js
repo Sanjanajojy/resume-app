@@ -1,0 +1,16 @@
+import axiosInstance from "./axiosinstant";
+
+const apiService=async(httpMethod,url,reqBody)=>{
+    const reqconfig={
+        method:httpMethod,
+        url,
+        data:reqBody
+    }
+    try{
+        const response=await axiosInstance(reqconfig)
+        return response
+    }catch(err){
+        throw err
+    }
+}
+export default apiService
